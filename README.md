@@ -66,7 +66,7 @@ docker compose version
 ## Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+git clone https://github.com/Nandarwal/sunbird_os_poc.git
 ```
 
 Move into the project directory:
