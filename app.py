@@ -12,6 +12,32 @@ conn = psycopg2.connect(
     password="SecretPassword123"
 )
 
+@app.route('/register', methods=['POST'])
+def register():
+
+    data = request.json
+
+    phone = data['phone_number']
+    password = data['password']
+
+    cur = conn.cursor()
+
+    cur.execute(
+        """
+        INSERT INTO users
+        (phone_number, password_hash)
+        VALUES (%s,%s)
+        """,
+        (phone, password)
+    )
+
+    conn.commit()
+
+    return jsonify({
+        "success": True
+    })
+    
+
 @app.route('/submit', methods=['POST'])
 def submit():
     data = request.json
