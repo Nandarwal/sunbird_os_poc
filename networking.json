@@ -1,0 +1,36 @@
+{
+  "id": "networking",
+  "name": "Networking Fundamentals",
+  "questions": [
+    {
+      "id": "q1",
+      "body": "What does IP stand for?",
+      "options": ["Internet Protocol", "Internal Process", "Internet Package", "Integrated Port"],
+      "answer": [0]
+    },
+    {
+      "id": "q2",
+      "body": "Which device forwards network traffic?",
+      "options": ["Monitor", "Router", "Printer", "Keyboard"],
+      "answer": [1]
+    },
+    {
+      "id": "q3",
+      "body": "What is the default HTTP port?",
+      "options": ["21", "22", "80", "443"],
+      "answer": [2]
+    },
+    {
+      "id": "q4",
+      "body": "What does DNS do?",
+      "options": ["Stores files", "Converts names to IP addresses", "Encrypts traffic", "Monitors servers"],
+      "answer": [1]
+    },
+    {
+      "id": "q5",
+      "body": "Which protocol is secure HTTP?",
+      "options": ["FTP", "SMTP", "SSH", "HTTPS"],
+      "answer": [3]
+    }
+  ]
+}

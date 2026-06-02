@@ -1,0 +1,36 @@
+{
+  "id": "linux_basics",
+  "name": "Linux Basics",
+  "questions": [
+    {
+      "id": "q1",
+      "body": "Which command lists files in a directory?",
+      "options": ["ls", "pwd", "mkdir", "cat"],
+      "answer": [0]
+    },
+    {
+      "id": "q2",
+      "body": "Which command shows the current directory?",
+      "options": ["cd", "pwd", "ls", "whoami"],
+      "answer": [1]
+    },
+    {
+      "id": "q3",
+      "body": "Which command creates a new directory?",
+      "options": ["touch", "mkdir", "rm", "nano"],
+      "answer": [1]
+    },
+    {
+      "id": "q4",
+      "body": "Which command removes a file?",
+      "options": ["ls", "cp", "rm", "mv"],
+      "answer": [2]
+    },
+    {
+      "id": "q5",
+      "body": "Linux is primarily a:",
+      "options": ["Database", "Operating System", "Browser", "Programming Language"],
+      "answer": [1]
+    }
+  ]
+}

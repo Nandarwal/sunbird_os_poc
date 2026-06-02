@@ -1,0 +1,36 @@
+{
+  "id": "database_basics",
+  "name": "Database Basics",
+  "questions": [
+    {
+      "id": "q1",
+      "body": "What does SQL stand for?",
+      "options": ["Structured Query Language", "Simple Query Language", "System Query Logic", "Standard Question Language"],
+      "answer": [0]
+    },
+    {
+      "id": "q2",
+      "body": "Which SQL command retrieves data?",
+      "options": ["INSERT", "DELETE", "SELECT", "UPDATE"],
+      "answer": [2]
+    },
+    {
+      "id": "q3",
+      "body": "Which database is being used in this project?",
+      "options": ["MongoDB", "MySQL", "PostgreSQL", "Oracle"],
+      "answer": [2]
+    },
+    {
+      "id": "q4",
+      "body": "A row in a table is also called a:",
+      "options": ["Record", "Column", "Schema", "Index"],
+      "answer": [0]
+    },
+    {
+      "id": "q5",
+      "body": "Which command adds new data?",
+      "options": ["INSERT", "SELECT", "DROP", "ALTER"],
+      "answer": [0]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "cloud_ops",
+  "name": "Cloud Operations Basics",
+  "questions": [
+    {
+      "id": "q1",
+      "body": "What does CPU stand for?",
+      "options": ["Central Processing Unit", "Cloud Processing Unit", "Computer Primary Utility", "Control Processing Unit"],
+      "answer": [0]
+    },
+    {
+      "id": "q2",
+      "body": "Which cloud model provides virtual machines?",
+      "options": ["IaaS", "PaaS", "SaaS", "FaaS"],
+      "answer": [0]
+    },
+    {
+      "id": "q3",
+      "body": "Which company provides AWS?",
+      "options": ["Google", "Microsoft", "Amazon", "IBM"],
+      "answer": [2]
+    },
+    {
+      "id": "q4",
+      "body": "What is scalability?",
+      "options": ["Increasing capacity when needed", "Deleting data", "Stopping servers", "Changing passwords"],
+      "answer": [0]
+    },
+    {
+      "id": "q5",
+      "body": "Which service stores files in AWS?",
+      "options": ["EC2", "Lambda", "S3", "RDS"],
+      "answer": [2]
+    }
+  ]
+}
