@@ -85,10 +85,6 @@
      class="container"
      style="display:none;">
 
-<div id="quizScreen"
-     class="container"
-     style="display:none;">
-
     <h2>Intern Knowledge Check: Platform Engineering</h2>
 
     <select id="quizSelector">
@@ -130,16 +126,7 @@
 
 </div>
 
-    <hr>
-    
-    <div id="quiz"></div>
-
-<br>
-
-<button onclick="submitQuiz()">Submit Quiz</button>
-
-<div id="result" style="margin-top:20px;font-weight:bold;"></div>
-</div>
+  
 
 <script>
 let quizData;
@@ -236,7 +223,11 @@ async function login() {
             "userId",
             data.user_id
         );
-
+        
+        localStorage.setItem(
+            "phoneNumber",
+            phone
+        );
         showQuizScreen();
 
     }
@@ -286,6 +277,12 @@ function loadQuiz() {
 
 
 function submitQuiz() {
+    if (!quizData) {
+
+    alert("Please load a quiz first");
+
+    return;
+}
 
     console.log("Submit button clicked");
     alert("Submit function started");
@@ -325,12 +322,23 @@ console.log("Sending data to Flask...");
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
+
     user_id: localStorage.getItem("userId"),
+
+    phone_number:
+        localStorage.getItem(
+        "phoneNumber"
+    ),
+
     quiz_id: quizData.id,
+
     quiz_name: quizData.name,
+
     score: score,
-    total_questions: quizData.questions.length
-    })
+
+    total_questions:
+        quizData.questions.length
+})
   })
   
   .then(response => response.json())

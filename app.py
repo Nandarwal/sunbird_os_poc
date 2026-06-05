@@ -15,6 +15,41 @@ conn = psycopg2.connect(
 @app.route('/register', methods=['POST'])
 def register():
 
+    try:
+
+        data = request.json
+
+        phone = data['phone_number']
+        password = data['password']
+
+        cur = conn.cursor()
+
+        cur.execute(
+            """
+            INSERT INTO users
+            (phone_number, password_hash)
+            VALUES (%s,%s)
+            """,
+            (phone, password)
+        )
+
+        conn.commit()
+
+        return jsonify({
+            "success": True
+        })
+
+    except Exception as e:
+
+        print(e)
+
+        return jsonify({
+            "success": False
+        })
+    
+@app.route('/login', methods=['POST'])
+def login():
+
     data = request.json
 
     phone = data['phone_number']
@@ -24,19 +59,26 @@ def register():
 
     cur.execute(
         """
-        INSERT INTO users
-        (phone_number, password_hash)
-        VALUES (%s,%s)
+        SELECT id
+        FROM users
+        WHERE phone_number=%s
+        AND password_hash=%s
         """,
         (phone, password)
     )
 
-    conn.commit()
+    user = cur.fetchone()
+
+    if user:
+
+        return jsonify({
+            "success": True,
+            "user_id": user[0]
+        })
 
     return jsonify({
-        "success": True
+        "success": False
     })
-    
 
 @app.route('/submit', methods=['POST'])
 def submit():

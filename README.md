@@ -72,7 +72,7 @@ git clone https://github.com/Nandarwal/sunbird_os_poc.git
 Move into the project directory:
 
 ```bash
-cd sunbird-poc
+cd sunbird_os_poc
 ```
 
 ---
